@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+
+
+</div>
+<form method="post">
+    {% csrf_token %}
+    <label>Nome do produto: </label>
+    <input id="your_name" type="text" name="nome_produto">
+    <label>Imagem: </label>
+    <input id="your_name" type="text" name="imagem">
+    <label>Preço Unitario: </label>
+    <input id="your_name" type="text"  name="preco_unitario">
+    <label>Ativo: </label>
+    <input id="your_name" type="checkbox"  name="ativo">
+    <label>Quantidade estoque: </label>
+    <input id="your_name" type="text"  name="quantidade_estoque">
+    <input type="submit">
+</form>
+
+
+</body>
+</html>
