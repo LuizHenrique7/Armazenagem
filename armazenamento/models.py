@@ -3,6 +3,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+
 class Pedido(models.Model):
     id = models.AutoField(primary_key=True)
     dataCriacao = models.DateTimeField(default=timezone.now)
@@ -24,3 +25,5 @@ class Produto(models.Model):
     preco_unitario = models.DecimalField(max_digits=10, decimal_places=2)
     ativo = models.BooleanField()
 
+    def __str__(self):
+        return self.nome

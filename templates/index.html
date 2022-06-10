@@ -5,10 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div>
-
-<section id="formulario-busca">
-    <form method="GET">
+<form method="GET">
 
     <div class="">
         <button class="" type="submit" >Buscar</button>
@@ -16,25 +13,9 @@
     <input type=”text” class="" placeholder="Pesquise aqui" name="search" id="search">
 
 </form>
-</section>
 
-</div>
-<form method="post">
-    {% csrf_token %}
-    <label>Nome do produto: </label>
-    <input id="your_name" type="text" name="nome_produto">
-    <label>Imagem: </label>
-    <input id="your_name" type="text" name="imagem">
-    <label>Preço Unitario: </label>
-    <input id="your_name" type="text"  name="preco_unitario">
-    <label>Ativo: </label>
-    <input id="your_name" type="checkbox"  name="ativo">
-    <label>Quantidade estoque: </label>
-    <input id="your_name" type="text"  name="quantidade_estoque">
-    <input type="submit">
-</form>
-<div>
-    {% for produto in lista %}
+
+{% for produto in lista %}
         <section>
             <H1>{{ produto.nome }}</H1>
             <p>{{ produto.id }}</p>
@@ -47,8 +28,11 @@
 
 
         </section>
-    {% endfor %}
-</div>
+
+{% endfor %}
+
+
+
 
 </body>
 </html>
