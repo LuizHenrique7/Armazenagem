@@ -20,8 +20,8 @@ class PedidoItem(models.Model):
 class Produto(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=30)
-    imagemURL = models.CharField(max_length=100)
-    quantidade_estoque = models.DecimalField(max_digits=100, decimal_places=2)
+    imagemURL = models.CharField(max_length=200)
+    quantidade_estoque = models.IntegerField()
     preco_unitario = models.DecimalField(max_digits=10, decimal_places=2)
     ativo = models.BooleanField()
 
