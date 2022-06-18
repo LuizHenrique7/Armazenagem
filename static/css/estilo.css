@@ -1,0 +1,95 @@
+
+body{
+    background-color: #ffffff
+}
+
+
+
+.post{
+
+background-color: #ffffff;
+border-radius: 3vh;
+padding: 3vh;
+font-size: 2vh;
+margin: 1.5vh;
+font-family: arial
+
+
+
+}
+
+.formulario{
+    background-color: rgba(95, 156, 215, 0.44);
+    border-radius: 1vh;
+    padding: 2vh;
+    font-size: 2vh;
+    margin: 1vh;
+    font-family: arial
+}
+
+
+
+
+.botao{
+    border-radius: 1vh;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: rgba(48, 212, 246, 0.69);
+    border-style: solid;
+    padding: 0.5vh;
+    font-family: arial;
+
+
+
+}
+
+
+
+.campo_busca{
+    height: 2vh;
+    border-radius: 0.5vh;
+}
+
+.campo_adicionar{
+    height: 2vh;
+    border-radius: 0.5vh;
+}
+
+.formulario_busca{
+    background-color: rgba(140, 137, 137, 0.09);
+    border-radius: 1vh;
+    padding: 1vh;
+    font-size: 2vh;
+    font-family: arial;
+
+
+
+
+}
+
+.enviar{
+    cursor: pointer;
+    border-radius: 1vh;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: rgba(48, 104, 246, 0.69);
+    border-style: solid;
+    padding: 0.5vh;
+    font-family: arial;
+}
+
+
+.imagem{
+    height: 15vh ;
+    width: 25vh ;
+    border-radius: 1vh;
+}
+
+.produtos{
+    font-family: arial;
+    margin: 3vh;
+
+
+}

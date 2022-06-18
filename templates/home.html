@@ -1,48 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Estoque</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3608/3608996.png" />
 </head>
 <body>
 <div>
 
 <section id="formulario-busca">
-    <form method="GET">
-
-    <div class="">
-        <button class="" type="submit" >Buscar</button>
-    </div>
-    <input type=”text” class="" placeholder="Pesquise aqui" name="search" id="search">
-
-</form>
+    <form method="GET" class="formulario_busca">
+        Estoque <input type=”text” class="campo_busca" placeholder="Pesquise aqui" name="search" id="search">
+        <button type="submit" class="botao" >Buscar</button>
+    </form>
 </section>
 
 </div>
-<form method="post">
+<form method="post" class="formulario">
     {% csrf_token %}
     <label>Nome do produto: </label>
-    <input id="your_name" type="text" name="nome_produto">
+    <input type="text" class="campo_adicionar" name="nome_produto" required>
     <label>Imagem: </label>
-    <input id="your_name" type="text" name="imagem">
+    <input type="text" class="campo_adicionar" name="imagem" required>
     <label>Preço Unitario: </label>
-    <input id="your_name" type="text"  name="preco_unitario">
+    <input type="text" class="campo_adicionar"  name="preco_unitario" required>
     <label>Ativo: </label>
-    <input id="your_name" type="checkbox"  name="ativo">
+    <input type="checkbox"  name="ativo" required>
     <label>Quantidade estoque: </label>
-    <input id="your_name" type="text"  name="quantidade_estoque">
-    <input type="submit">
+    <input type="text" class="campo_adicionar"  name="quantidade_estoque" required>
+    <input type="submit" class="enviar">
 </form>
 <div>
     {% for produto in lista %}
-        <section>
+        <section class="produtos">
             <H1>{{ produto.nome }}</H1>
-            <p>{{ produto.id }}</p>
-            <p>{{ produto.preco_unitario }}</p>
-            <p>{{ produto.quantidade_estoque }}</p>
+            <p>R${{ produto.preco_unitario }}</p>
+            <p>Quantidade disponível: {{ produto.quantidade_estoque }}</p>
             <p>{{ produto.ativo }}</p>
-            <p>{{ produto.imagemURL }}</p>
-            <img height="300px" width="500px" border="10px" src={{  produto.imagemURL }}>
+            <img class="imagem" src={{  produto.imagemURL }}>
 
 
 
